@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<ul class="list-group">
+    {% for instance in object_list %}
+    <li class="list-group-item"><a href="{{ instance.get_absolute_url }}">{{instance.title}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

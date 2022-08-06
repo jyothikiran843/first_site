@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<ul class="list-group">
+    {% for student in students %}
+    <li class="list-group-item"><a href="{% url 'detail' student.slug %}">{{student.sname}}&nbsp;&nbsp;&nbsp;&nbsp;{{student.gpa}}</li></a>
+    {% endfor %}
+</ul>
+{% endblock %}
